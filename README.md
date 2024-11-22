@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Calculadora de Limites
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma **Calculadora de Limites** desenvolvida em React, com o objetivo de auxiliar no cálculo de limites de funções matemáticas. A aplicação permite a inserção de expressões matemáticas, cálculo de limites em um ponto e fornece passos detalhados da resolução, ideal para fins educativos e didáticos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Cálculo de Limites:** Resolva limites de funções matemáticas em um ponto específico.
+- **Passos Detalhados:** A aplicação exibe os passos da resolução, como substituição, derivação e aplicação de regras específicas.
+- **Interface Intuitiva:** A interface é amigável, com componentes bem organizados e responsivos.
+- **Feedback de Erros:** Exibe mensagens de erro em casos de entrada inválida ou limitações matemáticas.
 
-### `npm start`
+## Como Funciona
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Frontend em React:** O projeto utiliza Create React App como base, permitindo o rápido desenvolvimento e execução em ambiente local.
+2. **Cálculo Matemático:** A lógica principal do cálculo de limites está implementada em um arquivo de utilitários (`limitCalculator.js`). 
+3. **Componentes Reutilizáveis:**
+   - `CalculatorForm`: Formulário para entrada de dados.
+   - `ResultDisplay`: Exibe o resultado e os passos da solução.
+   - `Instructions`: Instruções para o uso da calculadora.
 
-### `npm test`
+### Fluxo de Uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. O usuário insere:
+   - A expressão matemática.
+   - A variável utilizada (ex.: `x`).
+   - O valor ao qual a variável está se aproximando (ex.: `2` ou `∞` para infinito).
+   - A direção da aproximação (direita, esquerda ou ambos).
+2. Ao clicar no botão "Calcular", a aplicação processa os dados e exibe:
+   - O resultado do limite.
+   - Os passos detalhados utilizados para chegar ao resultado.
 
-### `npm run build`
+## Como Rodar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/limit-calculator.git
+   cd limit-calculator
+   ```
+2. Instale as depêndencias:
+    ```bash
+   npm install
+3. Inicialize o servidor de teste:
+    ```bash
+    npm start
+    ```
+4. Acesse no navegador: http:localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades a Implementar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Aproximação ao Infinito:**
+   - Melhorar o suporte a cálculos quando a variável tende a \( +\infty \) ou \( -\infty \).
+   - Identificar termos dominantes em expressões com polinômios ou frações.
 
-### `npm run eject`
+2. **Suporte a Funções Mais Complexas:**
+   - Funções trigonométricas (ex.: `sin(x)`, `cos(x)`).
+   - Logaritmos e exponenciais.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Melhoria na Interface:**
+   - Destaque visual para passos da solução.
+   - Suporte a entrada de equações mais complexas via editores matemáticos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Erros e Indeterminações:**
+   - Lidar melhor com formas indeterminadas, como \( \frac{\infty}{\infty} \), \( \frac{0}{0} \), etc.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Modo Offline:**
+   - Transformar a aplicação em uma Progressive Web App (PWA) para funcionamento offline.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. **Internacionalização:**
+   - Suporte a múltiplos idiomas além do português.
 
-## Learn More
+## Contribuição
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Sinta-se à vontade para abrir issues ou pull requests caso deseje contribuir com melhorias, correções de bugs ou novas funcionalidades.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
